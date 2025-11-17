@@ -1,0 +1,44 @@
+﻿@page "/carreras"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using TareaFinal.Modelos
+@implements IAsyncDisposable
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@rendermode InteractiveServer
+
+
+<PageTitle>Listado de Carreras</PageTitle>
+<h2 class="centrar"><b>Listado de Carreras</b></h2>
+
+<p>
+    <a class="btn btn-warning" href="carreras/create">
+        <i class="fa-solid fa-plus"> </i>
+        Crear Carrera
+    </a>
+</p>
+
+<QuickGrid Class="table" Items="context.Carrera.Where(m => m.Inactivo == false)" Pagination="pagination">
+    <PropertyColumn Property="carrera => carrera.Nombre" />
+    @*<PropertyColumn Property="carrera => carrera.Inactivo" />*@
+
+    <TemplateColumn Context="carrera">
+        <a href="@($"carreras/edit?id={carrera.Id}")">Editar</a> |
+        <a href="@($"carreras/details?id={carrera.Id}")">Detalles</a> |
+        <a href="@($"carreras/delete?id={carrera.Id}")">Eliminar</a>
+    </TemplateColumn>
+</QuickGrid>
+<Paginator State="pagination" />
+
+
+@code {
+    private AppDbContext context = default!;
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 10 };
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

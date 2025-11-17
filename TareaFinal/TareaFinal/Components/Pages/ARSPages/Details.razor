@@ -1,0 +1,47 @@
+﻿@page "/ars/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Información ARS</PageTitle>
+<h2 class="centrar"><b>Detalles ARS</b></h2>
+
+<div>
+    <hr />
+    @if (ars is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@ars.Nombre</dd>
+            
+        </dl>
+        <div>
+            <a href="@($"/ars/edit?id={ars.Id}")" class="btn btn-primary">Editar</a> |
+            <a href="@($"/ars")" class="btn btn-primary">Volver al Listado</a>
+        </div>
+    }
+</div>
+
+@code {
+    private ARS? ars;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        ars = await context.ARS.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        ars.Inactivo = true;
+        context.Attach(ars!).State = EntityState.Modified;
+
+        if (ars is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

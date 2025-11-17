@@ -1,0 +1,48 @@
+﻿@page "/religions/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Información Religión</PageTitle>
+<h2 class="centrar"><b>Detalles Religión</b></h2>
+
+
+<div>
+    <hr />
+    @if (religion is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@religion.Nombre</dd>
+           
+        </dl>
+        <div>
+            <a href="@($"/religions/edit?id={religion.Id}")" class="btn btn-primary">Editar</a> |
+            <a href="@($"/religions")" class="btn btn-primary">Volver al Listado</a>
+        </div>
+    }
+</div>
+
+@code {
+    private Religion? religion;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        religion = await context.Religion.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        religion.Inactivo = true;
+        context.Attach(religion!).State = EntityState.Modified;
+
+        if (religion is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

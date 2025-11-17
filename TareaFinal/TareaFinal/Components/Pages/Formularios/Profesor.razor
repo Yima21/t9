@@ -1,0 +1,236 @@
+﻿@page "/formularios/profesor"
+
+<PageTitle>Profesor</PageTitle>
+
+<div class="container mt-4">
+    <form action="" method="get">
+        <fieldset class="border p-3">
+            <legend class="float-none w-auto p-2">Datos del Profesor</legend>
+
+            <div class="mb-3">
+                <label for="codigo" class="form-label">Código</label>
+                <input type="text" name="codigo" id="codigo" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" name="cedula" id="cedula" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" name="fechaDeNacimiento" id="fechaDeNacimiento" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeIngreso" class="form-label">Fecha de Ingreso</label>
+                <input type="date" name="fechaDeIngreso" id="fechaDeIngreso" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" maxlength="40" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" name="apellido" id="apellido" maxlength="40" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sexo</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M">
+                    <label class="form-check-label" for="sexoM">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                    <label class="form-check-label" for="sexoF">Femenino</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="estadoCivil" class="form-label">Estado Civil</label>
+                <select name="estadoCivil" id="estadoCivil" class="form-select">
+                    <option value="Casado">Casado</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Separado">Separado</option>
+                    <option value="Soltero">Soltero</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="ocupacion" class="form-label">Ocupación</label>
+                <select name="ocupacion" id="ocupacion" class="form-select">
+                    <option value="Abogado/a">Abogado/a</option>
+                    <option value="Profesor/a">Profesor/a</option>
+                    <option value="Médico/a">Médico/a</option>
+                    <option value="Músico/a">Músico/a</option>
+                    <option value="Veterinario/a">Veterinario/a</option>
+                    <option value="Filósofo/a">Filósofo/a</option>
+                    <option value="Administrador/a">Administrador/a</option>
+                    <option value="Psicólogo/a">Psicólogo/a</option>
+                    <option value="Economista">Economista</option>
+                    <option value="Odontólogo/a">Odontólogo/a</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tipoDeSangre" class="form-label">Tipo de Sangre</label>
+                <select name="tipoDeSangre" id="tipoDeSangre" class="form-select">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="O">O</option>
+                    <option value="AB">AB</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                <input type="text" name="nacionalidad" id="nacionalidad" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="religion" class="form-label">Religión</label>
+                <select name="religion" id="religion" class="form-select">
+                    <option value="Cristianismo">Cristianismo</option>
+                    <option value="Islam ">Islam </option>
+                    <option value="Budismo ">Budismo </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="dirrecion" class="form-label">Dirección</label>
+                <input type="text" name="dirrecion" id="dirrecion" maxlength="100" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="carrera" class="form-label">Carrera</label>
+                <select name="carrera" id="carrera" class="form-select">
+                    <option value="Administración de empresas">Administración de empresas</option>
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Informática">Informática</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Ingeniería industrial">Ingeniería industrial</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tituloDeLaCarreraDeGrado" class="form-label">Título de la Carrera de Grado</label>
+                <input type="text" name="tituloDeLaCarreraDeGrado" id="tituloDeLaCarreraDeGrado" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Mayor Grado Académico Alcanzado</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="mayorGradoAcademicoAlcanzado" id="mayorGradoAcademicoAlcanzadoLicenciatura" value="Licenciado">
+                    <label class="form-check-label" for="mayorGradoAcademicoAlcanzadoLicenciatura">Licenciatura</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="mayorGradoAcademicoAlcanzado" id="mayorGradoAcademicoAlcanzadoIngenieria" value="Ingeniería">
+                    <label class="form-check-label" for="mayorGradoAcademicoAlcanzadoIngenieria">Ingeniería</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="mayorGradoAcademicoAlcanzado" id="mayorGradoAcademicoAlcanzadoMaestria" value="Maestría">
+                    <label class="form-check-label" for="mayorGradoAcademicoAlcanzadoMaestria">Maestría</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="mayorGradoAcademicoAlcanzado" id="mayorGradoAcademicoAlcanzadoDoctorado" value="Doctorado">
+                    <label class="form-check-label" for="mayorGradoAcademicoAlcanzadoDoctorado">Doctorado</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="categoriaProfesoral" class="form-label">Categoría Profesoral</label>
+                <select name="categoriaProfesoral" id="categoriaProfesoral" class="form-select">
+                    <option value="Provisional">Provisional</option>
+                    <option value="Adscrito">Adscrito</option>
+                    <option value="Adjunto">Adjunto</option>
+                    <option value="Titular">Titular</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="facultaQuePertenece" class="form-label">Facultad a la que pertenece</label>
+                <select name="facultaQuePertenece" id="facultaQuePertenece" class="form-select">
+                    <option value="Facultad de Humanidades">Facultad de Humanidades</option>
+                    <option value="Facultad de Ciencias">Facultad de Ciencias</option>
+                    <option value="Facultad de Ciencias Económicas y Sociales">Facultad de Ciencias Económicas y Sociales</option>
+                    <option value="Facultad de Ciencias Jurídicas y Políticas">Facultad de Ciencias Jurídicas y Políticas</option>
+                    <option value="Facultad de Ingeniería y Arquitectura">Facultad de Ingeniería y Arquitectura</option>
+                    <option value="Facultad de Ciencias de la Salud">Facultad de Ciencias de la Salud</option>
+                    <option value="Facultad de Ciencias Agronómicas y Veterinarias">Facultad de Ciencias Agronómicas y Veterinarias</option>
+                    <option value="Facultad de Artes">Facultad de Artes</option>
+                    <option value="Facultad de Ciencias de la Educación">Facultad de Ciencias de la Educación</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Asignaturas que Imparte</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteMatematica" value="Matemática">
+                    <label class="form-check-label" for="asignaturaQueImparteMatematica">Matemática</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteIngles" value="Inglés">
+                    <label class="form-check-label" for="asignaturaQueImparteIngles">Inglés</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteQuimica" value="Química">
+                    <label class="form-check-label" for="asignaturaQueImparteQuimica">Química</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteFisica" value="Física">
+                    <label class="form-check-label" for="asignaturaQueImparteFisica">Física</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteLetra" value="Letra">
+                    <label class="form-check-label" for="asignaturaQueImparteLetra">Letra</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteBiologia" value="Biología">
+                    <label class="form-check-label" for="asignaturaQueImparteBiologia">Biología</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteLiteratura" value="Literatura">
+                    <label class="form-check-label" for="asignaturaQueImparteLiteratura">Literatura</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteHistoria" value="Historia">
+                    <label class="form-check-label" for="asignaturaQueImparteHistoria">Historia</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteEducacionCivica" value="Educación Cívica">
+                    <label class="form-check-label" for="asignaturaQueImparteEducacionCivica">Educación Cívica</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="asignaturaQueImparte" id="asignaturaQueImparteEducacionFisica" value="Educación Física">
+                    <label class="form-check-label" for="asignaturaQueImparteEducacionFisica">Educación Física</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="observaciones" class="form-label">Observaciones</label>
+                <textarea name="observaciones" id="observaciones" rows="5" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar y Guardar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar todo</button>
+        </fieldset>
+    </form>
+</div>
+
+@code {
+
+}

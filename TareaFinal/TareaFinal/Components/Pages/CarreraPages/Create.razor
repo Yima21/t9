@@ -1,0 +1,41 @@
+﻿@page "/carreras/create"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Crear Carrera</PageTitle>
+<h2 class="centrar"><b>Crear Carrera</b></h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Carrera" OnValidSubmit="AddCarrera" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label> 
+                <InputText id="nombre" @bind-Value="Carrera.Nombre" class="form-control" aria-required="true"/> 
+                <ValidationMessage For="() => Carrera.Nombre" class="text-danger" /> 
+            </div>        
+               
+            <button type="submit" class="btn btn-primary">Crear</button> | <a href="/carreras" class="btn btn-primary">Volver al Listado</a>
+        </EditForm>
+    </div>
+</div>
+
+
+
+@code {
+    [SupplyParameterFromForm]
+    private Carrera Carrera { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddCarrera()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Carrera.Add(Carrera);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/carreras");
+    }
+}

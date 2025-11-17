@@ -1,0 +1,122 @@
+﻿@page "/estudiantes/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Información del Estudiante</PageTitle>
+<h2 class ="centrar"><b>Detalles del Estudiante</b></h2>
+
+
+<div>
+    <hr />
+    @if (estudiante is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Matrícula</dt>
+            <dd class="col-sm-10">@estudiante.Matricula</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Cédula</dt>
+            <dd class="col-sm-10">@estudiante.Cedula</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Fecha de Nacimiento</dt>
+            <dd class="col-sm-10">@estudiante.FechaNacimiento</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Fecha de Ingreso</dt>
+            <dd class="col-sm-10">@estudiante.FechaIngreso</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@estudiante.Nombre</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Apellido</dt>
+            <dd class="col-sm-10">@estudiante.Apellido</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Sexo</dt>
+            <dd class="col-sm-10">@estudiante.Sexo</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Estado Civil</dt>
+            <dd class="col-sm-10">@estudiante.EstadoCivil</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Ocupación</dt>
+            <dd class="col-sm-10">@estudiante.Ocupacion</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Tipo de Sangre</dt>
+            <dd class="col-sm-10">@estudiante.TipoSangre</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Nacionalidad</dt>
+            <dd class="col-sm-10">@estudiante.Nacionalidad</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Religión</dt>
+            <dd class="col-sm-10">@estudiante.Religion</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Teléfono</dt>
+            <dd class="col-sm-10">@estudiante.Telefono</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Email</dt>
+            <dd class="col-sm-10">@estudiante.Email</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Nombre del Padre</dt>
+            <dd class="col-sm-10">@estudiante.NombrePadre</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Nombre de la Madre</dt>
+            <dd class="col-sm-10">@estudiante.NombreMadre</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Dirección</dt>
+            <dd class="col-sm-10">@estudiante.Direccion</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Institución de Origen</dt>
+            <dd class="col-sm-10">@estudiante.TipoColegioEstudio</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Carrera</dt>
+            <dd class="col-sm-10">@estudiante.Carrera</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Observaciones</dt>
+            <dd class="col-sm-10">@estudiante.Observaciones</dd>
+        </dl>
+        <div>
+            <a href="@($"/estudiantes/edit?id={estudiante.Id}")" class="btn btn-primary"><b>Editar</b></a> |
+            <a href="@($"/estudiantes")" class="btn btn-primary"><b>Volver al Listado</b></a>
+        </div>
+    }
+</div>
+
+@code {
+    private Estudiante? estudiante;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        estudiante = await context.Estudiante.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        estudiante.Inactivo = true;
+
+        if (estudiante is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

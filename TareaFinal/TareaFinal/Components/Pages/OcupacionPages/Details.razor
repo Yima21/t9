@@ -1,0 +1,49 @@
+﻿@page "/ocupacions/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Información Ocupación</PageTitle>
+<h2 class="centrar"><b>Detalles Ocupación</b></h2>
+
+
+<div>
+    <hr />
+    @if (ocupacion is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@ocupacion.Nombre</dd>
+            
+        </dl>
+        <div>
+            <a href="@($"/ocupacions/edit?id={ocupacion.Id}")" class="btn btn-primary">Editar</a> |
+
+            <a href="@($"/ocupacions")" class="btn btn-primary">Volver al Listado</a>
+        </div>
+    }
+</div>
+
+@code {
+    private Ocupacion? ocupacion;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        ocupacion = await context.Ocupacion.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        ocupacion.Inactivo = true;
+        context.Attach(ocupacion!).State = EntityState.Modified;
+
+        if (ocupacion is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

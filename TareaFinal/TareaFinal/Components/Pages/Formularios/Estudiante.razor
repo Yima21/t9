@@ -1,0 +1,159 @@
+﻿@page "/formularios/estudiante"
+
+<PageTitle>Estudiante</PageTitle>
+
+<div class="container mt-4">
+    <form action="" method="get">
+        <fieldset class="border p-3">
+            <legend class="float-none w-auto p-2">Datos del Estudiante</legend>
+
+            <div class="mb-3">
+                <label for="matricula" class="form-label">Matrícula</label>
+                <input type="text" name="matricula" id="matricula" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" name="cedula" id="cedula" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" name="fechaDeNacimiento" id="fechaDeNacimiento" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeIngreso" class="form-label">Fecha de Ingreso</label>
+                <input type="date" name="fechaDeIngreso" id="fechaDeIngreso" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" maxlength="40" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" name="apellido" id="apellido" maxlength="40" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sexo</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M">
+                    <label class="form-check-label" for="sexoM">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                    <label class="form-check-label" for="sexoF">Femenino</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="estadoCivil" class="form-label">Estado Civil</label>
+                <select name="estadoCivil" id="estadoCivil" class="form-select">
+                    @foreach (String estadoCivil in estadosCiviles)
+                    {
+                        <option value="@estadoCivil">@estadoCivil</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="ocupacion" class="form-label">Ocupación</label>
+                <select name="ocupacion" id="ocupacion" class="form-select">
+                    @foreach (String ocupacion in ocupaciones)
+                    {
+                        <option value="@ocupacion">@ocupacion</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tipoDeSangre" class="form-label">Tipo de Sangre</label>
+                <select name="tipoDeSangre" id="tipoDeSangre" class="form-select">
+                    @foreach (String tipoDeSange in tiposDeSangres)
+                    {
+                        <option value="@tipoDeSange">@tipoDeSange</option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                <input type="text" name="nacionalidad" id="nacionalidad" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="religion" class="form-label">Religión</label>
+                <select name="religion" id="religion" class="form-select">
+                    <option value="Cristianismo">Cristianismo</option>
+                    <option value="Islam ">Islam </option>
+                    <option value="Budismo ">Budismo </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="nombreDelPadre" class="form-label">Nombre del Padre</label>
+                <input type="text" name="nombreDelPadre" id="nombreDelPadre" maxlength="60" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="nombreDeLaMadre" class="form-label">Nombre de la Madre</label>
+                <input type="text" name="nombreDeLaMadre" id="nombreDeLaMadre" maxlength="60" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="dirrecion" class="form-label">Dirección</label>
+                <input type="text" name="dirrecion" id="dirrecion" maxlength="100" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="tipoDeColegioDondeEstudio" class="form-label">Tipo de Colegio donde Estudió</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoDeColegioDondeEstudio" id="tipoDeColegioDondeEstudioPubl" value="Público">
+                    <label class="form-check-label" for="tipoDeColegioDondeEstudioPubl">Público</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoDeColegioDondeEstudio" id="tipoDeColegioDondeEstudioPriv" value="Privado">
+                    <label class="form-check-label" for="tipoDeColegioDondeEstudioPriv">Privado</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="carrera" class="form-label">Carrera</label>
+                <select name="carrera" id="carrera" class="form-select">
+                    <option value="Administración de empresas">Administración de empresas</option>
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Informática">Informática</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Ingeniería industrial">Ingeniería industrial</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="observaciones" class="form-label">Observaciones</label><br>
+                <textarea name="observaciones" id="observaciones" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar y Guardar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar todo</button>
+        </fieldset>
+    </form>
+</div>
+
+@code {
+    public String[] estadosCiviles = { "Casado", "Divorciado", "Separado", "Soltero", "Viudo" };
+    public String[] ocupaciones = { "Abogado/a", "Profesor/a", "Médico/a", "Músico/a", "Veterinario/a", "Filósofo/a", "Administrador/a", "Psicólogo/a", "Economista", "Odontólogo/a" };
+    public String[] tiposDeSangres = { "A", "B", "O", "AB" };
+}

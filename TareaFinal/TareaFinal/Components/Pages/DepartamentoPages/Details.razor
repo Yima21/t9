@@ -1,0 +1,47 @@
+﻿@page "/departamentos/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Información Departamento</PageTitle>
+<h2 class="centrar"><b>Detalles Departamento</b></h2>
+
+<div>
+    <hr />
+    @if (departamento is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@departamento.Nombre</dd>
+            
+        </dl>
+        <div>
+            <a href="@($"/departamentos/edit?id={departamento.Id}")" class="btn btn-primary">Editar</a> |
+            <a href="@($"/departamentos")" class="btn btn-primary">Volver al Listado</a>
+        </div>
+    }
+</div>
+
+@code {
+    private Departamento? departamento;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        departamento = await context.Departamento.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        departamento.Inactivo = true;
+        context.Attach(departamento!).State = EntityState.Modified;
+
+        if (departamento is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

@@ -1,0 +1,72 @@
+﻿@page "/facultads/delete"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Eliminar</PageTitle>
+<h2 class="centrar"><b>¿Está seguro que desea eliminar esta información?</b></h2>
+
+<div>
+    <hr />
+    @if (facultad is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@facultad.Nombre</dd>
+        </dl>
+        
+        <EditForm method="post" Model="facultad" OnValidSubmit="DeleteFacultad" FormName="delete" Enhance>
+            <button type="submit" class="btn btn-danger" disabled="@(facultad is null)">Eliminar</button> |
+            <a href="/facultads" class="btn btn-primary">Volver al Listado</a>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private Facultad? facultad;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        facultad = await context.Facultad.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+
+        if (facultad is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task DeleteFacultad()
+    {
+        using var context = DbFactory.CreateDbContext();
+        try
+        {
+            if (facultad is not null)
+            {
+                facultad.Inactivo = true;
+                context.Attach(facultad!).State = EntityState.Modified;
+            }
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (facultad is null)
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+        
+        NavigationManager.NavigateTo("/facultads");
+    }
+}

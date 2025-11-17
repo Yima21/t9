@@ -1,0 +1,44 @@
+﻿@page "/afps/create"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode InteractiveServer
+
+<PageTitle>Crear AFP</PageTitle>
+<h2 class="centrar"><b>Crear AFP</b></h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="AFP" OnValidSubmit="AddAFP" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label> 
+                <InputText id="nombre" @bind-Value="AFP.Nombre" class="form-control" aria-required="true"/> 
+                <ValidationMessage For="() => AFP.Nombre" class="text-danger" /> 
+            </div>        
+                  
+            <button type="submit" class="btn btn-primary">Crear</button> | <a href="/afps" class="btn btn-primary">Volver al Listado</a>
+        </EditForm>
+    </div>
+</div>
+
+
+
+@code {
+    [SupplyParameterFromForm]
+    private AFP AFP { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddAFP()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.AFP.Add(AFP);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/afps");
+    }
+}

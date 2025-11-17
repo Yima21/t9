@@ -1,0 +1,49 @@
+﻿@page "/afps/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode InteractiveServer
+
+<PageTitle>Información AFP</PageTitle>
+<h2 class="centrar"><b>Detalles AFP</b></h2>
+
+<div>
+    <hr />
+    @if (afp is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@afp.Nombre</dd>
+            
+        </dl>
+        <div>
+            <a href="@($"/afps/edit?id={afp.Id}")" class="btn btn-primary">Editar</a> |
+            <a href="@($"/afps")" class="btn btn-primary">Volver al Listado</a>
+        </div>
+    }
+</div>
+
+@code {
+    private AFP? afp;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        afp = await context.AFP.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        afp.Inactivo = true;
+        context.Attach(afp!).State = EntityState.Modified;
+
+        if (afp is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

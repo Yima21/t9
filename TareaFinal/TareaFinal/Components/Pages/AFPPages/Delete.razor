@@ -1,0 +1,74 @@
+﻿@page "/afps/delete"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode InteractiveServer
+
+<PageTitle>Eliminar</PageTitle>
+<h2 class="centrar"><b>¿Está seguro que desea eliminar esta información?</b></h2>
+
+<div>
+    <hr />
+    @if (afp is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@afp.Nombre</dd>
+        </dl>
+        
+        <EditForm method="post" Model="afp" OnValidSubmit="DeleteAFP" FormName="delete" Enhance>
+            <button type="submit" class="btn btn-danger" disabled="@(afp is null)">Eliminar</button> |
+            <a href="/afps" class="btn btn-primary">Volver al Listado</a>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private AFP? afp;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        afp = await context.AFP.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+
+        if (afp is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task DeleteAFP()
+    {
+        using var context = DbFactory.CreateDbContext();
+        try
+        {
+            if (afp is not null)
+            {
+                afp.Inactivo = true;
+                context.Attach(afp!).State = EntityState.Modified;
+            }
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (afp is null)
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+        
+        NavigationManager.NavigateTo("/afps");
+    }
+}

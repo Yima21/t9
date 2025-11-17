@@ -1,0 +1,86 @@
+﻿@page "/religions/edit"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Editar Religión</PageTitle>
+<h2 class="centrar"><b>Editar Religión</b></h2>
+
+
+<hr />
+@if (Religion is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="Religion" OnValidSubmit="UpdateReligion" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert"/>
+                <input type="hidden" name="Religion.Id" value="@Religion.Id" />
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <InputText id="nombre" @bind-Value="Religion.Nombre" class="form-control" aria-required="true"/>
+                    <ValidationMessage For="() => Religion.Nombre" class="text-danger" />
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Guardar</button> | <a href="/religions" class="btn btn-primary">Volver al Listado</a>
+            </EditForm>
+        </div>
+    </div>
+}
+
+
+@code {
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private Religion? Religion { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Religion ??= await context.Religion.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+
+        if (Religion is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more information, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task UpdateReligion()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Religion!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!ReligionExists(Religion!.Id))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/religions");
+    }
+
+    private bool ReligionExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Religion.Any(e => e.Id == id);
+    }
+}

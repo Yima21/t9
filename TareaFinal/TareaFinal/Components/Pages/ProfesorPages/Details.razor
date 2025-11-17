@@ -1,0 +1,122 @@
+﻿@page "/profesors/details"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Información del Profesor</PageTitle>
+<h2 class="centrar"><b>Detalles del Profesor</b></h2>
+
+<div>
+    <hr />
+    @if (profesor is null)
+    {
+        <p><em>Cargando...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Código</dt>
+            <dd class="col-sm-10">@profesor.Codigo</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Cédula</dt>
+            <dd class="col-sm-10">@profesor.Cedula</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Fecha de Nacimiento</dt>
+            <dd class="col-sm-10">@profesor.FechaNacimiento</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Fecha de Ingreso</dt>
+            <dd class="col-sm-10">@profesor.FechaIngreso</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+            <dd class="col-sm-10">@profesor.Nombre</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Apellido</dt>
+            <dd class="col-sm-10">@profesor.Apellido</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Sexo</dt>
+            <dd class="col-sm-10">@profesor.Sexo</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Estado Civil</dt>
+            <dd class="col-sm-10">@profesor.EstadoCivil</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Ocupación</dt>
+            <dd class="col-sm-10">@profesor.Ocupacion</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Tipo de Sangre</dt>
+            <dd class="col-sm-10">@profesor.TipoSangre</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Nacionalidad</dt>
+            <dd class="col-sm-10">@profesor.Nacionalidad</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Religión</dt>
+            <dd class="col-sm-10">@profesor.Religion</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Télefono</dt>
+            <dd class="col-sm-10">@profesor.Telefono</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Email</dt>
+            <dd class="col-sm-10">@profesor.Email</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Dirección</dt>
+            <dd class="col-sm-10">@profesor.Direccion</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Facultad</dt>
+            <dd class="col-sm-10">@profesor.Facultad</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Titulo Alcanzado</dt>
+            <dd class="col-sm-10">@profesor.TituloGradoAlcanzado</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Grado Academico</dt>
+            <dd class="col-sm-10">@profesor.GradoAcademicoAlcanzado</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Categoria Profesional</dt>
+            <dd class="col-sm-10">@profesor.CategoriaProfesional</dd>
+        </dl>
+        <dl class="row">
+            <dt class="col-sm-2">Observaciones</dt>
+            <dd class="col-sm-10">@profesor.Observaciones</dd>
+        </dl>
+        <div>
+            <a href="@($"/profesors/edit?id={profesor.Id}")" class="btn btn-primary"><b>Editar</b></a> |
+            <a href="@($"/profesors")" class="btn btn-primary"><b>Volver al Listado</b></a>
+        </div>
+    }
+</div>
+
+@code {
+    private Profesor? profesor;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        profesor = await context.Profesor.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+        profesor.Inactivo = true;
+        context.Attach(profesor!).State = EntityState.Modified;
+
+        if (profesor is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

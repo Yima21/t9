@@ -1,0 +1,41 @@
+﻿@page "/religions/create"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Crear Religión</PageTitle>
+<h2 class="centrar"><b>Crear Religión</b></h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Religion" OnValidSubmit="AddReligion" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label> 
+                <InputText id="nombre" @bind-Value="Religion.Nombre" class="form-control" aria-required="true"/> 
+                <ValidationMessage For="() => Religion.Nombre" class="text-danger" /> 
+            </div>        
+                  
+            <button type="submit" class="btn btn-primary">Crear</button> | <a href="/religions" class="btn btn-primary">Volver al Listado</a>
+        </EditForm>
+    </div>
+</div>
+
+
+@code {
+    [SupplyParameterFromForm]
+    private Religion Religion { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddReligion()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Religion.Add(Religion);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/religions");
+    }
+}

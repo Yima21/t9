@@ -1,0 +1,86 @@
+﻿@page "/gradoacademicos/edit"
+@using Microsoft.EntityFrameworkCore
+@using TareaFinal.Modelos
+@inject IDbContextFactory<TareaFinal.Modelos.AppDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Editar Grado Académico</PageTitle>
+<h2 class="centrar"><b>Editar Grado Académico</b></h2>
+
+
+<hr />
+@if (GradoAcademico is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="GradoAcademico" OnValidSubmit="UpdateGradoAcademico" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert"/>
+                <input type="hidden" name="GradoAcademico.Id" value="@GradoAcademico.Id" />
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <InputText id="nombre" @bind-Value="GradoAcademico.Nombre" class="form-control" aria-required="true"/>
+                    <ValidationMessage For="() => GradoAcademico.Nombre" class="text-danger" />
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Guardar</button> | <a href="/gradoacademicos" class="btn btn-primary">Volver al Listado</a>
+            </EditForm>
+        </div>
+    </div>
+}
+
+
+@code {
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private GradoAcademico? GradoAcademico { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        GradoAcademico ??= await context.GradoAcademico.FirstOrDefaultAsync(m => m.Id == Id && m.Inactivo == false);
+
+        if (GradoAcademico is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more information, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task UpdateGradoAcademico()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(GradoAcademico!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!GradoAcademicoExists(GradoAcademico!.Id))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/gradoacademicos");
+    }
+
+    private bool GradoAcademicoExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.GradoAcademico.Any(e => e.Id == id);
+    }
+}

@@ -1,0 +1,393 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\empleadopages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\empleadopages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\empleadopages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\empleadopages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\empleadopages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\empleadopages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\empleadopages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\empleadopages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\empleadopages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\empleadopages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\afppages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\afppages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\afppages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\afppages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\afppages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\afppages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\afppages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\afppages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\afppages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\afppages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\afppages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\afppages\\component.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\formularios\\empleado.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\formularios\\empleado.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\ocupacionpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\ocupacionpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\profesorpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\profesorpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\gradoacademicopages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\gradoacademicopages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\nacionalidadpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\nacionalidadpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\religionpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\religionpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\estudiantepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\estudiantepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\components\\pages\\estudiantepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\components\\pages\\estudiantepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|c:\\users\\yima\\desktop\\proyecto finalej\\proyecto final\\tareafinal\\tareafinal\\modelos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7BB40C8-F699-421D-B2DC-D16EA872930C}|TareaFinal\\TareaFinal.csproj|solutionrelative:tareafinal\\modelos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Details.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Details.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Details.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:55:30.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Delete.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Delete.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Delete.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:55:25.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Edit.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Edit.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Edit.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:55:02.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:54:55.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Create.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EmpleadoPages\\Create.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EmpleadoPages\\Create.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:52:48.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Edit.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\AFPPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Edit.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\AFPPages\\Edit.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:50:29.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Details.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\AFPPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Details.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\AFPPages\\Details.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:50:22.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Delete.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\AFPPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Delete.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\AFPPages\\Delete.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:50:15.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Create.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\AFPPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Create.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\AFPPages\\Create.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:49:58.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Program.cs",
+              "RelativeDocumentMoniker": "TareaFinal\\Program.cs",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Program.cs",
+              "RelativeToolTip": "TareaFinal\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T20:46:43.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAIwGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:43:50.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Empleado.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\Formularios\\Empleado.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\Formularios\\Empleado.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\Formularios\\Empleado.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\Formularios\\Empleado.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:42:09.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\OcupacionPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\OcupacionPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\OcupacionPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\OcupacionPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:30:31.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\NacionalidadPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\NacionalidadPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\NacionalidadPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\NacionalidadPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:30:25.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\AFPPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\AFPPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:28:02.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\ProfesorPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\ProfesorPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\ProfesorPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\ProfesorPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:30:38.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\GradoAcademicoPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\GradoAcademicoPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\GradoAcademicoPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\GradoAcademicoPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:30:16.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Component.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Component.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\AFPPages\\Component.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\AFPPages\\Component.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\AFPPages\\Component.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:28:36.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\ReligionPages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\ReligionPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\ReligionPages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\ReligionPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:30:44.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EstudiantePages\\Index.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EstudiantePages\\Index.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EstudiantePages\\Index.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EstudiantePages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T20:27:35.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EstudiantePages\\Create.razor",
+              "RelativeDocumentMoniker": "TareaFinal\\Components\\Pages\\EstudiantePages\\Create.razor",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Components\\Pages\\EstudiantePages\\Create.razor",
+              "RelativeToolTip": "TareaFinal\\Components\\Pages\\EstudiantePages\\Create.razor",
+              "ViewState": "AgIAAEYAAAAAQDQzMzP7vwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-09T01:29:16.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Modelos\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TareaFinal\\Modelos\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Yima\\Desktop\\Proyecto FinalEJ\\Proyecto Final\\TareaFinal\\TareaFinal\\Modelos\\AppDbContext.cs",
+              "RelativeToolTip": "TareaFinal\\Modelos\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T01:28:38.365Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

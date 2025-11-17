@@ -1,0 +1,166 @@
+﻿@page "/formularios/empleado"
+
+<PageTitle>Empleado</PageTitle>
+
+
+<div class="container mt-4">
+    <form action="" method="get">
+        <fieldset class="border p-3">
+            <legend class="float-none w-auto p-2">Datos del Empleado</legend>
+
+            <div class="mb-3">
+                <label for="codigo" class="form-label">Código</label>
+                <input type="text" name="codigo" id="codigo" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" name="cedula" id="cedula" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" name="fechaDeNacimiento" id="fechaDeNacimiento" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeIngreso" class="form-label">Fecha de Ingreso</label>
+                <input type="date" name="fechaDeIngreso" id="fechaDeIngreso" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" maxlength="40" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" name="apellido" id="apellido" maxlength="40" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sexo</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M">
+                    <label class="form-check-label" for="sexoM">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                    <label class="form-check-label" for="sexoF">Femenino</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="estadoCivil" class="form-label">Estado Civil</label>
+                <select name="estadoCivil" id="estadoCivil" class="form-select">
+                    <option value="Casado">Casado</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Separado">Separado</option>
+                    <option value="Soltero">Soltero</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="tipoDeSangre" class="form-label">Tipo de Sangre</label>
+                <select name="tipoDeSangre" id="tipoDeSangre" class="form-select">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="O">O</option>
+                    <option value="AB">AB</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                <input type="text" name="nacionalidad" id="nacionalidad" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="religion" class="form-label">Religión</label>
+                <select name="religion" id="religion" class="form-select">
+                    <option value="Cristianismo">Cristianismo</option>
+                    <option value="Islam ">Islam </option>
+                    <option value="Budismo ">Budismo </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="dirrecion" class="form-label">Dirección</label>
+                <input type="text" name="dirrecion" id="dirrecion" maxlength="100" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="salarioMensual" class="form-label">Salario Mensual</label>
+                <input type="number" name="salarioMensual" id="salarioMensual" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="departamentoAlQuePertenece" class="form-label">Departamento al que pertenece</label>
+                <select name="departamentoAlQuePertenece" id="departamentoAlQuePertenece" class="form-select">
+                    <option value="Departamento de Recursos Humanos">Departamento de Recursos Humanos</option>
+                    <option value="Departamento financiero">Departamento financiero</option>
+                    <option value="Departamento de marketing">Departamento de marketing</option>
+                    <option value="Departamento comercial">Departamento comercial</option>
+                    <option value="Departamento de compras">Departamento de compras</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nombreContactoEmergencia" class="form-label">Nombre Contacto Emergencia</label>
+                <input type="text" name="nombreContactoEmergencia" id="nombreContactoEmergencia" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="telefonoContactoEmergencia" class="form-label">Teléfono Contacto Emergencia</label>
+                <input type="tel" name="telefonoContactoEmergencia" id="telefonoContactoEmergencia" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="afpQuePertenece" class="form-label">AFP a la que pertenece</label>
+                <select name="afpQuePertenece" id="afpQuePertenece" class="form-select">
+                    <option value="AFP Popular">AFP Popular</option>
+                    <option value="AFP Crecer">AFP Crecer</option>
+                    <option value="AFP Reservas">AFP Reservas</option>
+                    <option value="AFP Siembra">AFP Siembra</option>
+                    <option value="AFP Romana">AFP Romana</option>
+                    <option value="AFP JMMB-BDI">AFP JMMB-BDI</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="arsQuePertenece" class="form-label">ARS a la que pertenece</label>
+                <select name="arsQuePertenece" id="arsQuePertenece" class="form-select">
+                    <option value="ARS SeNaSa">ARS SeNaSa</option>
+                    <option value="ARS Humano">ARS Humano</option>
+                    <option value="ARS Universal">ARS Universal</option>
+                    <option value="ARS Palic Salud">ARS Palic Salud</option>
+                    <option value="ARS Mapfre Salud ARS">ARS Mapfre Salud ARS</option>
+                    <option value="ARS Renacer">ARS Renacer</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="observaciones" class="form-label">Observaciones</label>
+                <textarea name="observaciones" id="observaciones" rows="5" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar y Guardar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar todo</button>
+        </fieldset>
+    </form>
+</div>
+
+@code {
+
+}
